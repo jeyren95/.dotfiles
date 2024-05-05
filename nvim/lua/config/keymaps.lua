@@ -4,7 +4,6 @@ local keymap = vim.api.nvim_set_keymap
 ------ Leader key ------
 keymap("", "<Space>", "<Nop>", opts)
 
-
 ------ Modes ------
 -- normal_mode = "n"
 -- insert_mode = "i"
@@ -34,5 +33,11 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+-- Telescope
+keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>t", "<cmd>Telescope live_grep<CR>", opts)
 
-
+------ Visual mode ------
+-- Stay in indent mode
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
