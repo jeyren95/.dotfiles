@@ -15,6 +15,11 @@ return {
 				"eslint",
 				"lua_ls",
 				"jsonls",
+				"sqlls",
+				"tailwindcss",
+				"dockerls",
+				"docker_compose_language_service",
+				"bashls",
 			}
 		})
 	end

@@ -40,11 +40,15 @@ return {
 		-- capabilities
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+		lspconfig.tsserver.setup({
+			on_attach = on_attach,
+		})
 		lspconfig.html.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
-		lspconfig.tsserver.setup({
+		lspconfig.emmet_ls.setup({
 			on_attach = on_attach,
 		})
 		lspconfig.gopls.setup({
@@ -58,6 +62,21 @@ return {
 			on_attach = on_attach,
 		})
 		lspconfig.lua_ls.setup({
+			on_attach = on_attach,
+		})
+		lspconfig.sqls.setup({
+			on_attach = on_attach,
+		})
+		lspconfig.tailwindcss.setup({
+			on_attach = on_attach,
+		})
+		lspconfig.dockerls.setup({
+			on_attach = on_attach,
+		})
+		lspconfig.docker_compose_language_service.setup({
+			on_attach = on_attach,
+		})
+		lspconfig.bashls.setup({
 			on_attach = on_attach,
 		})
 
