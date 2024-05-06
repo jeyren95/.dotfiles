@@ -36,6 +36,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>t", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>gs", "<cmd>Telescope git_status<CR>", opts)
 
 ------ Visual mode ------
 -- Stay in indent mode
