@@ -31,10 +31,10 @@ return {
 		local opts = { noremap = true, silent = true }
 		local on_attach = function(client, bufnr)
 			opts.desc = "Show diagnostics"
-			keymap(bufnr, "n", "gof", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-			keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-			keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-			keymap(bufnr, "n", "gh", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+			keymap(bufnr, "n", "<leader>lo", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+			keymap(bufnr, "n", "<leader>ld", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+			keymap(bufnr, "n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+			keymap(bufnr, "n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
 		end
 
 		-- capabilities

@@ -15,13 +15,14 @@ keymap("", "<Space>", "<Nop>", opts)
 
 ------ Normal mode ------
 -- Window split
-keymap("n", "<C-s>", "<C-w>s", opts)
+keymap("n", "<C-s>", "<cmd>vert sb<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-n>", "<C-w>n", opts)
 
 -- Resize window with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -34,9 +35,9 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
-keymap("n", "<leader>t", "<cmd>Telescope live_grep<CR>", opts)
-keymap("n", "<leader>gs", "<cmd>Telescope git_status<CR>", opts)
+keymap("n", "<leader>tf", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>tg", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>ts", "<cmd>Telescope git_status<CR>", opts)
 
 ------ Visual mode ------
 -- Stay in indent mode

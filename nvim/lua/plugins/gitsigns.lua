@@ -8,11 +8,11 @@ return {
 		local opts = { noremap = true, silent = true }
 		local on_attach = function(client, bufnr)
 			opts.bufnr = bufnr
-			keymap.set("n", "hp", gitsigns.preview_hunk, opts)
-			keymap.set("n", "hb", gitsigns.blame_line, opts)
-			keymap.set("n", "hr", gitsigns.reset_buffer, opts)
-			keymap.set("n", "hj", gitsigns.next_hunk, opts)
-			keymap.set("n", "hk", gitsigns.prev_hunk, opts)
+			keymap.set("n", "<leader>gp", gitsigns.preview_hunk, opts)
+			keymap.set("n", "<leader>gb", gitsigns.blame_line, opts)
+			keymap.set("n", "<leader>gr", gitsigns.reset_buffer, opts)
+			keymap.set("n", "<leader>gj", gitsigns.next_hunk, opts)
+			keymap.set("n", "<leader>gk", gitsigns.prev_hunk, opts)
 		end
 
 		gitsigns.setup({
