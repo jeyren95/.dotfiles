@@ -15,7 +15,7 @@ keymap("", "<Space>", "<Nop>", opts)
 
 ------ Normal mode ------
 -- Window split
-keymap("n", "<C-v>", "<cmd>vert sb<CR>", opts)
+keymap("n", "<C-s>", "<cmd>vert sb<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -35,12 +35,12 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Telescope
-keymap("n", "ff", "<cmd>Telescope find_files<CR>", opts)
-keymap("n", "lg", "<cmd>Telescope live_grep<CR>", opts)
-keymap("n", "gs", "<cmd>Telescope git_status<CR>", opts)
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>lg", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>gs", "<cmd>Telescope git_status<CR>", opts)
 
 -- Nvim tree
-keymap("n", "tt", "<cmd>NvimTreeToggle<CR>", opts)
+-- keymap("n", "<leader>tt", "<cmd>NvimTreeToggle<CR>", opts)
 
 ------ Visual mode ------
 -- Stay in indent mode

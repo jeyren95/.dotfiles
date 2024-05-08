@@ -8,9 +8,28 @@ return {
 		vim.g.loaded_netrwPlugin = 1
 
 		local nvim_tree = require("nvim-tree")
+		local api = require("nvim-tree.api")
 
 		-- keymaps
+		local opts = { noremap = true, silent = true }
+		local keymap = vim.keymap
+		local on_attach = function(client, bufnr)
+			opts.bufnr = bufnr
+			-- default 
+			api.config.mappings.default_on_attach(bufnr)
+
+			-- custom
+			keymap.set("n", "<leader>tt", api.tree.toggle, opts)
+			keymap.set("n", "<leader>s", api.node.open.vertical, opts)
+			keymap.set("n", "<leader>n", api.fs.create, opts)
+			keymap.set("n", "<leader>d", api.fs.remove, opts)
+			keymap.set("n", "<leader>c", api.fs.copy.node, opts)
+			keymap.set("n", "<leader>p", api.fs.paste, opts)
+			keymap.set("n", "<leader>r", api.fs.rename, opts)
+		end
+
 		nvim_tree.setup({
+			on_attach = on_attach,
 			update_focused_file = {
 					enable = true,
 					update_cwd = true,
