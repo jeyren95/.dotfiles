@@ -1,7 +1,8 @@
 return {
 	"williamboman/mason.nvim",
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim" -- acts as the bridge between mason and nvim-lspconfig
+		"williamboman/mason-lspconfig.nvim", -- acts as the bridge between mason and nvim-lspconfig
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 	config = function()
 		require("mason").setup({})
@@ -20,6 +21,13 @@ return {
 				"dockerls",
 				"docker_compose_language_service",
 				"bashls",
+			}
+		})
+
+		require("mason-tool-installer").setup({
+			ensure_installed = {
+				"prettierd",
+				"stylua",
 			}
 		})
 	end
