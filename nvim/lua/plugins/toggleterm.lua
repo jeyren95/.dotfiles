@@ -5,7 +5,7 @@ return {
 		toggleterm.setup({
 			size = 28,
 			open_mapping = [[<c-\>]],
-			direction = "horizontal",
+			direction = "float",
 		})
 	end
 }
