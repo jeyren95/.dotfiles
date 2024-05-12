@@ -34,13 +34,17 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+-- Delete current buffer
+keymap("n", "<S-b>", ":bd", opts)
+
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>gs", "<cmd>Telescope git_status<CR>", opts)
 
--- Nvim tree
--- keymap("n", "<leader>tt", "<cmd>NvimTreeToggle<CR>", opts)
+-- Format
+keymap("n", "<leader>.", ":lua vim.lsp.buf.format()<CR>", opts)
+
 
 ------ Visual mode ------
 -- Stay in indent mode
