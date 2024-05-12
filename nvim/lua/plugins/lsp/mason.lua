@@ -28,6 +28,7 @@ return {
 			ensure_installed = {
 				"prettierd",
 				"stylua",
+				"yamlfmt",
 			}
 		})
 	end
