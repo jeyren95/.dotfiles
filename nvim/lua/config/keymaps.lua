@@ -45,6 +45,9 @@ keymap("n", "<leader>gs", "<cmd>Telescope git_status<CR>", opts)
 -- Format
 keymap("n", "<leader>.", ":lua vim.lsp.buf.format()<CR>", opts)
 
+-- Cursor
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
 
 ------ Visual mode ------
 -- Stay in indent mode
