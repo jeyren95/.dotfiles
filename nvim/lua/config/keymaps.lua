@@ -49,6 +49,9 @@ keymap("n", "<leader>.", ":lua vim.lsp.buf.format()<CR>", opts)
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
 
+-- Hover 
+keymap("n", "<leader>h", ":lua vim.lsp.buf.hover()<CR>", opts)
+
 ------ Visual mode ------
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
