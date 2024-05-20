@@ -35,7 +35,7 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Delete current buffer
-keymap("n", "<S-b>", ":bd", opts)
+keymap("n", "<S-b>", ":bd<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
