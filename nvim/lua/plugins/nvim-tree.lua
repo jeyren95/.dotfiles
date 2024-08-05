@@ -15,7 +15,7 @@ return {
 		local keymap = vim.keymap
 		local on_attach = function(client, bufnr)
 			opts.bufnr = bufnr
-			-- default 
+			-- default
 			-- api.config.mappings.default_on_attach(bufnr)
 
 			-- custom
@@ -35,54 +35,58 @@ return {
 			keymap.set("n", "<leader>o", api.node.open.edit, opts)
 			keymap.set("n", "<leader>x", api.fs.cut, opts)
 			keymap.set("n", "<leader>yn", api.fs.copy.filename, opts)
-
 		end
 
 		nvim_tree.setup({
 			on_attach = on_attach,
+			git = {
+				enable = true,
+				ignore = false,
+				timeout = 500,
+			},
 			update_focused_file = {
-					enable = true,
-					update_cwd = true,
-					ignore_list = {},
+				enable = true,
+				update_cwd = true,
+				ignore_list = {},
 			},
 			diagnostics = {
-        enable = true,
-        icons = {
-            hint = "",
-            info = "",
-            warning = "",
-            error = "",
-        },
-    	},
+				enable = true,
+				icons = {
+					hint = "",
+					info = "",
+					warning = "",
+					error = "",
+				},
+			},
 			renderer = {
 				highlight_git = true,
 				root_folder_modifier = ":t",
 				icons = {
 					show = {
-							file = true,
-							folder = true,
-							folder_arrow = true,
-							git = true,
+						file = true,
+						folder = true,
+						folder_arrow = true,
+						git = true,
 					},
 					glyphs = {
-							default = "",
-							symlink = "",
-							git = {
-									unstaged = "",
-									staged = "S",
-									unmerged = "",
-									renamed = "➜",
-									deleted = "",
-									untracked = "U",
-									ignored = "◌",
-							},
-							folder = {
-									default = "",
-									open = "",
-									empty = "",
-									empty_open = "",
-									symlink = "",
-							},
+						default = "",
+						symlink = "",
+						git = {
+							unstaged = "",
+							staged = "S",
+							unmerged = "",
+							renamed = "➜",
+							deleted = "",
+							untracked = "U",
+							ignored = "◌",
+						},
+						folder = {
+							default = "",
+							open = "",
+							empty = "",
+							empty_open = "",
+							symlink = "",
+						},
 					},
 				},
 			},
