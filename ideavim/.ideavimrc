@@ -24,40 +24,42 @@ Plug 'tpope/vim-commentary'
 
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-let mapleader = "space"
+let mapleader = ' '
 
 "" -- Window split --
-nmap <C-s> :vsplit<CR>
+nnoremap <C-s> :vsplit<CR>
 
 "" -- Window navigation --
-nmap <C-l> <C-w>l
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
 
-"" -- Window resize --
-nmap <C-Down> :resize -2<CR>
-nmap <C-Up> : resize +2<CR>
-nmap <C-Left> :vertical resize -2<CR>
-nmap <C-Right> :vertical resize +2<CR>
+"" -- Buffer navigation --
+nnoremap <S-l> :bnext<CR>
+nnoremap <S-h> :bprevious<CR>
 
-"" -- Buffer navigation
-nmap <S-l> :bnext<CR>
-nmap <S-h> :bprevious<CR>
+"" -- Delete current buffer --
+nnoremap <S-b> :bd<CR>
 
-" -- Delete current buffer
-nmap <S-b> :bd<CR>
+"" -- Hover --
+nnoremap <leader>h :action ShowHoverInfo<CR>
 
-" -- Hover
-nmap <leader>h <Action>(ShowHoverInfo)
+"" -- Cursor --
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 
-" -- Cursor
-nmap <C-d> <C-d>zz
-nmap <C-u> <C-u>zz
+"" -- Tree --
+nnoremap <leader>n :action NewFile<CR>
+nnoremap <leader>r :action RenameFile<CR>
+nnoremap <leader>d :action SafeDelete<CR>
+nnoremap <leader>s :action OpenInRightSplit<CR>
+nnoremap <leader>o :action OpenFile<CR>
+nnoremap <leader>ff :action GotoFile<CR>
 
-" -- Stay in indent mode
-xmap < <gv
-xmap > >gv
+"" -- Stay in indent mode --
+vnoremap < <gv
+vnoremap > >gv
 
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
