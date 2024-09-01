@@ -24,6 +24,12 @@ Plug 'tpope/vim-commentary'
 
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+
+"" -- Relative lines and absolute lines --
+set relativenumber
+set number
+
+"" -- Map leader key --
 let mapleader = ' '
 
 "" -- Window split --
