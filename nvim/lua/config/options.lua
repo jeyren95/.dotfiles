@@ -1,6 +1,6 @@
 vim.opt.tabstop = 2 -- number of spaces used for each tab
 vim.opt.cmdheight = 2 -- command line height
-vim.opt.number = true -- whether to show line number 
+vim.opt.number = true -- whether to show line number
 vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.relativenumber = true -- number of lines relative from the cursor
 vim.opt.shiftwidth = 2 -- number of spaaces used for each indent
