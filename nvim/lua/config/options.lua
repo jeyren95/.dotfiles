@@ -8,3 +8,4 @@ vim.opt.smartindent = true -- smart indenting when starting a new line
 vim.opt.smartcase = true -- override the ignorecase option if search pattern contains uppercase
 vim.opt.splitright = true -- splits the new window to the right
 vim.opt.mouse = "a" -- allow mouse to: be used in neovim
+vim.o.statuscolumn = "%s %l %r" -- show both absolute and relative lines

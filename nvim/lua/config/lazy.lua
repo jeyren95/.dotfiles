@@ -14,5 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ import = "plugins" },
 	{ import = "plugins.lsp" },
+	{ import = "plugins.theme" },
 })
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme onedark")
