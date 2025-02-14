@@ -8,4 +8,16 @@ vim.opt.smartindent = true -- smart indenting when starting a new line
 vim.opt.smartcase = true -- override the ignorecase option if search pattern contains uppercase
 vim.opt.splitright = true -- splits the new window to the right
 vim.opt.mouse = "a" -- allow mouse to: be used in neovim
-vim.o.statuscolumn = "%s %l %r" -- show both absolute and relative lines
+
+local function set_statuscolumn()
+	if vim.bo.filetype == "NvimTree" then
+		vim.opt.statuscolumn = "%s"
+	else
+		vim.opt.statuscolumn = "%s %l %r "
+	end
+end
+
+-- Auto-command to update statuscolumn per buffer
+vim.api.nvim_create_autocmd("BufEnter", {
+	callback = set_statuscolumn,
+})
