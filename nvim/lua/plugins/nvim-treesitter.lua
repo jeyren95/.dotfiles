@@ -4,25 +4,33 @@ return {
 		"JoosepAlviste/nvim-ts-context-commentstring",
 	},
 	build = ":TSUpdate",
-	config = function ()
+	config = function()
 		local configs = require("nvim-treesitter.configs")
 
 		configs.setup({
 			ensure_installed = {
 				"vim",
 				"lua",
-				"javascript",
+				"gitignore",
+				"json",
+				-- frontend
+				"html",
 				"css",
-				"dockerfile",
+				"scss",
+				"javascript",
+				"typescript",
+				"tsx",
+				-- backend
 				"bash",
 				"go",
-				"scss",
-				"typescript",
+				"dockerfile",
 				"yaml",
+				"sql",
+				"prisma"
 			},
 			sync_install = false,
 			highlight = { enable = true },
---			indent = { enable = true },
+			--			indent = { enable = true },
 		})
-	end
+	end,
 }
